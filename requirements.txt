@@ -1,0 +1,22 @@
+# Core dependencies
+pytube>=12.1.0
+openai-whisper>=20231117
+anthropic>=0.7.0
+numpy>=1.24.0
+opencv-python>=4.7.0
+Pillow>=9.4.0
+youtube-transcript-api>=0.6.0
+python-dotenv>=1.0.0
+google-api-python-client>=2.108.0
+backoff>=2.2.1
+
+# Optional dependencies
+ffmpeg-python>=0.2.0  # For audio processing support with Whisper
+torch>=2.0.0  # Required for Whisper
+torchaudio>=2.0.0  # Required for Whisper
+
+# System requirements (not pip-installable, commented for reference)
+# ffmpeg - install via your system package manager, required for Whisper
+# For Ubuntu/Debian: sudo apt-get install ffmpeg
+# For macOS: brew install ffmpeg
+# For Windows: download from https://ffmpeg.org/download.html
