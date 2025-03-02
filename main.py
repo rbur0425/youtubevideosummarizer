@@ -484,7 +484,7 @@ def create_timeline_from_video(video_path, interval, max_screenshots):
             os.remove(video_path)  # Clean up on error
         return []
 
-def create_visual_timeline(screenshots, grid_size=(2, 5)):
+def create_visual_timeline(screenshots, grid_size=(4, 5)):
     """Create a grid of screenshots with timestamps"""
     rows, cols = grid_size
     max_images = rows * cols
@@ -673,7 +673,7 @@ def summarize_youtube_video(
     claude_api_key, 
     output_dir="output",
     screenshot_interval=30,
-    max_screenshots=10,
+    max_screenshots=20,
     chunk_size=1500,
     overlap=200
 ):
@@ -724,8 +724,8 @@ def summarize_youtube_video(
     timeline_path = None
     if screenshots:
         print("\n=== CREATING VISUAL TIMELINE ===")
-        print(f"Generating timeline grid ({2}x{5})...")
-        timeline_image = create_visual_timeline(screenshots, grid_size=(2, 5))
+        print(f"Generating timeline grid ({4}x{5})...")
+        timeline_image = create_visual_timeline(screenshots, grid_size=(4, 5))
         
         if timeline_image:
             # Save the timeline image
@@ -874,13 +874,13 @@ def main():
     parser.add_argument(
         "--screenshots", 
         type=int, 
-        default=10, 
+        default=20, 
         help="Maximum number of screenshots"
     )
     parser.add_argument(
         "--grid-rows", 
         type=int, 
-        default=2, 
+        default=4, 
         help="Rows in the visual timeline grid"
     )
     parser.add_argument(
