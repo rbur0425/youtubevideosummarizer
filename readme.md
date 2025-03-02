@@ -26,6 +26,7 @@ This tool automatically creates comprehensive summaries of YouTube videos with b
 - **Detailed Progress Reporting**: Shows the status of each step in real-time
 - **Robust YouTube Processing**: Multiple fallback strategies for reliable video downloads and metadata extraction
 - **Advanced Error Handling**: Retry mechanisms with exponential backoff to handle temporary failures
+- **Multi-layer Fallback System**: Uses a combination of YouTube API, yt-dlp, direct HTTP requests, and Invidious API to ensure maximum reliability even when primary methods fail
 
 ## 🚀 Installation
 
@@ -34,7 +35,7 @@ This tool automatically creates comprehensive summaries of YouTube videos with b
 - Python 3.8+
 - [ffmpeg](https://ffmpeg.org/download.html) installed on your system
 - Claude API key from Anthropic
-- YouTube API key (optional, enhances metadata retrieval)
+- YouTube API key (optional, enhances metadata retrieval but not required)
 
 ### Setup with Virtual Environment
 

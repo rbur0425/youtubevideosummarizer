@@ -1,5 +1,6 @@
 # Core dependencies
-pytube>=12.1.0
+# pytube>=12.1.0  # Replaced with yt-dlp
+yt-dlp  # Always uses the latest version
 openai-whisper>=20231117
 anthropic>=0.7.0
 numpy>=1.24.0
@@ -9,6 +10,9 @@ youtube-transcript-api>=0.6.0
 python-dotenv>=1.0.0
 google-api-python-client>=2.108.0
 backoff>=2.2.1
+requests>=2.28.0
+beautifulsoup4>=4.12.0  # Optional, provides better HTML parsing
+tqdm>=4.65.0  # For progress bars
 
 # Optional dependencies
 ffmpeg-python>=0.2.0  # For audio processing support with Whisper
